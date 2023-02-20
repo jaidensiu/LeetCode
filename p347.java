@@ -6,7 +6,7 @@ class Solution {
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue()); // queue gtlargest to smallest values
         for (Map.Entry entry : map.entrySet()) {
             pq.add(entry);
         }
