@@ -2,24 +2,27 @@ package problems.p125;
 
 class Solution {
     public boolean isPalindrome(String s) {
-        if (s.length() == 0) return true;
-        String str = "";
-
-        for (char c : s.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) str += c;
-        }
-
-        str = str.toLowerCase(); // must reassign cause Strings are immutable
-
         int i = 0;
-        int j = str.length() - 1;
-
+        int j = s.length() - 1;
         while (i < j) {
-            if (str.charAt(i) != str.charAt(j)) return false;
+            char a = s.charAt(i);
+            char b = s.charAt(j);
+            a = Character.toLowerCase(a);
+            b = Character.toLowerCase(b);
+            if (!Character.isLetterOrDigit(a)) {
+                i++;
+                continue;
+            }
+            if (!Character.isLetterOrDigit(b)) {
+                j--;
+                continue;
+            }
+            if (a != b) {
+                return false;
+            }
             i++;
             j--;
         }
-        
         return true;
     }
 }
