@@ -1,3 +1,5 @@
+package problems.p704;
+
 class Solution {
     public int search(int[] nums, int target) {
         int lo = 0;

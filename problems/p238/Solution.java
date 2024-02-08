@@ -1,4 +1,4 @@
-import java.util.*;
+package problems.p238;
 
 class Solution {
     public int[] productExceptSelf(int[] nums) {

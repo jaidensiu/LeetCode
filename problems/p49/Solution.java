@@ -1,3 +1,5 @@
+package problems.p49;
+
 import java.util.*;
 
 class Solution {

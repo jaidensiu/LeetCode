@@ -1,3 +1,5 @@
+package problems.p20;
+
 import java.util.*;
 
 class Solution {
@@ -10,7 +12,7 @@ class Solution {
             if (stack.isEmpty()) {
                 if (s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']') return false;
                 else stack.add(s.charAt(i));
-            } else if (!stack.isEmpty()) {
+            } else {
                 if (stack.peek() == '(' && s.charAt(i) == ')') stack.pop();
                 else if (stack.peek() == '{' && s.charAt(i) == '}') stack.pop();
                 else if (stack.peek() == '[' && s.charAt(i) == ']') stack.pop();

@@ -1,4 +1,4 @@
-import java.util.*;
+package problems.p121;
 
 class Solution {
     public int maxProfit(int[] prices) {

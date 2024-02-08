@@ -1,3 +1,5 @@
+package problems.p347;
+
 import java.util.*;
 
 class Solution {
